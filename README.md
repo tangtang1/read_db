@@ -17,7 +17,7 @@
 #### self.dbconn = pymssql.connect(host=hostname, user=username, password=password, database=database, port=port)
 
 
-## （4）Azure SQL 数据库( __init__中的连接数据库需使用注释的语句连接)
+## （4）Azure SQL 数据库
 #### import pyodbc
 #### self.dbconn = pyodbc.connect('DRIVER={SQL Server};SERVER='+hostname+';DATABASE='+database+';UID='+username+';PWD='+ password)
 
