@@ -1,8 +1,6 @@
-# python 连接查询各种不同数据库
+# python 连接常见数据库并查询（使用步骤如下）
 
-##使用方法
-
-# 1. 根据数据库类型导入连接数据库包,并修改代码中对应代码
+# 1. 根据数据库类型导入连接对应数据库包,修改代码中对应代码
 
 ## （1）mysql数据库：
 #### import pymysql
@@ -14,7 +12,7 @@
 #### self.dbconn = psycopg2.connect(host=hostname, user=username, password=password, database=database, port=port)
 
 
-## （3）sqlserver数据库：
+## （3）sql server数据库：
 #### import pymssql
 #### self.dbconn = pymssql.connect(host=hostname, user=username, password=password, database=database, port=port)
 
