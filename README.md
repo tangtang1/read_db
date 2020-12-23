@@ -12,7 +12,7 @@
 ## sqlserver数据库：
 ### import pymssql
 
-# 2. 修改数据库查询语句
+# 2. 修改数据库查询语句 sql2
 
 # 3.查询数据库
 ### 使用： query_sql(sql2) 
