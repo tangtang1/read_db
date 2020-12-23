@@ -1,8 +1,9 @@
 # python 连接查询各种不同数据库
 
-#使用方法
+##使用方法
 
-# 1. 根据数据库类型更改导入连接数据库包(并更改 __init__中的 self.dbconn)
+# 1. 根据数据库类型导入连接数据库包,并修改代码中对应代码
+
 ## （1）mysql数据库：
 #### import pymysql
 #### self.dbconn = pymysql.connect(host=hostname, user=username, password=password, database=database, port=port)
