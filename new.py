@@ -15,10 +15,7 @@ port=0
 class DB(object):
     def __init__(self):
         #连接数据库
-        if not port:
-            self.dbconn = pymysql.connect(host=hostname, user=username, password=password, database=database)
-        else:
-            self.dbconn = pymysql.connect(host=hostname, user=username, password=password, database=database,port=port)
+        self.dbconn = pymysql.connect(host=hostname, user=username, password=password, database=database,port=port)
         #获取游标
         self.dbcur = self.dbconn.cursor()
     def __enter__(self):
