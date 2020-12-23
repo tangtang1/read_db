@@ -16,6 +16,8 @@ class DB(object):
     def __init__(self):
         #连接数据库
         self.dbconn = pymysql.connect(host=hostname, user=username, password=password, database=database,port=port)
+        ## Azure SQL 数据库连接
+        #self.dbconn = pyodbc.connect('DRIVER={SQL Server};SERVER='+hostname+';DATABASE='+database+';UID='+username+';PWD='+ password)
         #获取游标
         self.dbcur = self.dbconn.cursor()
     def __enter__(self):
