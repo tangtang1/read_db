@@ -8,12 +8,17 @@ hostname = ''
 database = ''
 username = ''
 password = ''
+#数据库连接端口，如果不设置，则使用默认端口
+port=0
 
 
 class DB(object):
     def __init__(self):
         #连接数据库
-        self.dbconn = pymysql.connect(host=hostname, user=username, password=password, database=database)
+        if not port:
+            self.dbconn = pymysql.connect(host=hostname, user=username, password=password, database=database)
+        else:
+            self.dbconn = pymysql.connect(host=hostname, user=username, password=password, database=database,port=port)
         #获取游标
         self.dbcur = self.dbconn.cursor()
     def __enter__(self):
