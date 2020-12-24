@@ -32,7 +32,7 @@ def query_sql(sql):
     with DB() as db:
         result = db.execute(sql)
         data = db.fetchall()
-        return data
+        return [list(i) for i in data]
 
 #查询sql语句
 sql2=''
